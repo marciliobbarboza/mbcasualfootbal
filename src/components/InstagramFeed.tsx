@@ -17,29 +17,29 @@ export const InstagramFeed = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Mock data - to be replaced with actual Instagram API integration
+        // Mock data with actual images
         const mockPosts = [
           {
             id: "1",
-            media_url: "https://via.placeholder.com/300x300",
+            media_url: "/jersey1.jpg", // Replace with your actual image paths
             permalink: "https://instagram.com/p/1",
             caption: "Classic Manchester United 1999 Champions League Final Jersey",
           },
           {
             id: "2",
-            media_url: "https://via.placeholder.com/300x300",
+            media_url: "/jersey2.jpg",
             permalink: "https://instagram.com/p/2",
             caption: "Vintage Arsenal Invincibles Home Kit 2003-04",
           },
           {
             id: "3",
-            media_url: "https://via.placeholder.com/300x300",
+            media_url: "/jersey3.jpg",
             permalink: "https://instagram.com/p/3",
             caption: "Real Madrid 2002 Champions League Final Jersey",
           },
           {
             id: "4",
-            media_url: "https://via.placeholder.com/300x300",
+            media_url: "/jersey4.jpg",
             permalink: "https://instagram.com/p/4",
             caption: "Brazil 2002 World Cup Winner's Jersey",
           },
@@ -87,11 +87,21 @@ export const InstagramFeed = () => {
               rel="noopener noreferrer"
               className="block aspect-square"
             >
-              <img
-                src={post.media_url}
-                alt={post.caption || "Instagram post"}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              <div className="relative w-full h-full">
+                <img
+                  src={post.media_url}
+                  alt={post.caption || "Instagram post"}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {/* Watermark logo overlay */}
+                <div className="absolute bottom-4 right-4 w-16 h-16 opacity-50">
+                  <img
+                    src="/mb-logo.png" // Add your watermark logo image
+                    alt="MB Casual Football"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                 <ExternalLink className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={24} />
               </div>
