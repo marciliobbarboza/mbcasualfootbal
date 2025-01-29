@@ -17,31 +17,55 @@ export const InstagramFeed = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        // Mock data with actual images
+        // Mock data with actual jersey images
         const mockPosts = [
           {
             id: "1",
-            media_url: "/jersey1.jpg", // Replace with your actual image paths
+            media_url: "/jerseys/jersey1.jpg",
             permalink: "https://instagram.com/p/1",
             caption: "Classic Manchester United 1999 Champions League Final Jersey",
           },
           {
             id: "2",
-            media_url: "/jersey2.jpg",
+            media_url: "/jerseys/jersey2.jpg",
             permalink: "https://instagram.com/p/2",
             caption: "Vintage Arsenal Invincibles Home Kit 2003-04",
           },
           {
             id: "3",
-            media_url: "/jersey3.jpg",
+            media_url: "/jerseys/jersey3.jpg",
             permalink: "https://instagram.com/p/3",
             caption: "Real Madrid 2002 Champions League Final Jersey",
           },
           {
             id: "4",
-            media_url: "/jersey4.jpg",
+            media_url: "/jerseys/jersey4.jpg",
             permalink: "https://instagram.com/p/4",
             caption: "Brazil 2002 World Cup Winner's Jersey",
+          },
+          {
+            id: "5",
+            media_url: "/jerseys/jersey5.jpg",
+            permalink: "https://instagram.com/p/5",
+            caption: "AC Milan 2007 Champions League Winner Jersey",
+          },
+          {
+            id: "6",
+            media_url: "/jerseys/jersey6.jpg",
+            permalink: "https://instagram.com/p/6",
+            caption: "Barcelona 2009 Treble Winner Home Jersey",
+          },
+          {
+            id: "7",
+            media_url: "/jerseys/jersey7.jpg",
+            permalink: "https://instagram.com/p/7",
+            caption: "Liverpool 2005 Champions League Istanbul Jersey",
+          },
+          {
+            id: "8",
+            media_url: "/jerseys/jersey8.jpg",
+            permalink: "https://instagram.com/p/8",
+            caption: "Juventus 1996 Champions League Winner Jersey",
           },
         ];
         setPosts(mockPosts);
@@ -96,7 +120,7 @@ export const InstagramFeed = () => {
                 {/* Watermark logo overlay */}
                 <div className="absolute bottom-4 right-4 w-16 h-16 opacity-50">
                   <img
-                    src="/mb-logo.png" // Add your watermark logo image
+                    src="/mb-logo.png"
                     alt="MB Casual Football"
                     className="w-full h-full object-contain"
                   />
